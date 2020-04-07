@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic');
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+hr {
+  box-sizing: border-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.-shadow {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+}
+
+li {
+  list-style: none;
+}
+
+section,
+header,
+footer {
+  padding: 0 15px;
+}
+
+.section-fluid,
+.header-fluid,
+.footer-fluid {
+  padding: 0 10px;
+}
+
+.card {
+  padding-top: 10px;
+  margin-top: 20px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2) 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+.app-nav-bar {
+  background: #ff871c;
+  -webkit-box-shadow: 0 6px 5px 0 rgba(247, 198, 156, 1);
+  -moz-box-shadow: 0 6px 5px 0 rgba(247, 198, 156, 1);
+  box-shadow: 0 6px 5px 0 rgba(247, 198, 156, 1);
+  &-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &__logo {
+    img {
+      height: 72px;
+      width: 72px;
+    }
+  }
+  &__unversity_name {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &__lang {
+    select {
+      background: transparent;
+      cursor: pointer;
+      width: 70px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 5px;
+      text-align: center;
+      font-size: 1em;
+    }
+  }
+}
+
+.app-tabs {
+  background: #ff871c;
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.base-search {
+  display: grid;
+  justify-content: center;
+  margin-top: 24px;
+  color: white;
+  label {
+    background: #ff871c;
+  }
+  input {
+    background: #ff871c;
+    color: #ffffff;
+    border: 1px solid #ff871c;
+    width: 500px;
+    height: 50px;
+    font-size: 16px;
+    padding-left: 50px;
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+}
+
+.book-list {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fill, 250px);
+}
+
+.card-content {
+  display: flex;
+  font-size: 12px;
+  &__image {
+    width: 100px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    object-fit: cover;
+  }
+  &-text {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgba($color: #000000, $alpha: 1);
+    &__title {
+      font-weight: bold;
+    }
+    &__subtitle {
+      font-weight: normal;
+    }
+  }
+}
