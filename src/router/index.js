@@ -5,6 +5,7 @@ import BookShow from '@/views/BookShow.vue'
 import BookList from '@/views/BookList.vue'
 import BookManage from '@/views/BookManage.vue'
 import BookOrder from '@/views/BookOrder.vue'
+import Statistics from '@/views/Statistics.vue'
 import NotFound from '@/views/NotFound.vue'
 import NProgress from 'nprogress'
 import store from '@/store'
@@ -44,6 +45,11 @@ const routes = [
     path: '/book-order',
     name: 'book-order',
     component: BookOrder
+  },
+  {
+    path: '/statistics',
+    name: 'statistics',
+    component: Statistics
   },
   {
     path: '/404',
