@@ -7,7 +7,7 @@
         type="search"
         :value="value"
         @input="updateValue"
-        :placeholder="placeholder"
+        placeholder="Поиск. . ."
       />
     </label>
   </div>
@@ -21,11 +21,7 @@ export default {
       type: String,
       default: ''
     },
-    value: [String, Number],
-    placeholder: {
-      type: String,
-      default: 'Поиск...'
-    }
+    value: [String, Number]
   },
   methods: {
     updateValue(book) {

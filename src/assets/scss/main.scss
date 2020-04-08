@@ -151,12 +151,6 @@ footer {
   }
 }
 
-.book-list {
-  display: grid;
-  justify-content: space-around;
-  grid-template-columns: repeat(auto-fill, 250px);
-}
-
 .card-content {
   display: flex;
   font-size: 12px;

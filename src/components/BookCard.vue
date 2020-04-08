@@ -14,7 +14,19 @@
           </p>
           <p class="card-content-text__title">
             Дата издания:
-            <span class="card-content-text__subtitle">{{ book.дата_публикации }}</span>
+            <span class="card-content-text__subtitle">{{
+              book.date_of_pub
+            }}</span>
+          </p>
+          <p class="card-content-text__title">
+            Дата получение:
+            <span class="card-content-text__subtitle">{{
+              book.date_of_get
+            }}</span>
+          </p>
+          <p class="card-content-text__title">
+            Рейтинг:
+            <span class="card-content-text__subtitle">{{ book.rating }}</span>
           </p>
         </div>
       </div>
@@ -30,5 +42,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
