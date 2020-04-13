@@ -40,9 +40,7 @@ export default {
         let book_author = data.author
           .toLowerCase()
           .match(this.search.toLowerCase())
-        let book_name = data.name
-          .toLowerCase()
-          .match(this.search.toLowerCase())
+        let book_name = data.name.toLowerCase().match(this.search.toLowerCase())
         return book_author || book_name
       })
     }

@@ -38,6 +38,11 @@
 export default {
   props: {
     book: Object
+  },
+  data() {
+    return {
+      // author:
+    }
   }
 }
 </script>

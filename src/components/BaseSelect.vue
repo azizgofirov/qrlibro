@@ -1,13 +1,19 @@
 <template>
   <div class="base-input">
     <label>
-      <select class="-shadow" :value="value" @change="updateValue" v-on="$listeners">
+      <select
+        class="-shadow"
+        :value="value"
+        @change="updateValue"
+        v-on="$listeners"
+      >
         <option
           v-for="option in options"
           :key="option.id"
           v-bind="$attrs"
           selected="option === value"
-        >{{ option }}</option>
+          >{{ option }}</option
+        >
       </select>
     </label>
   </div>

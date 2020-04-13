@@ -96,6 +96,7 @@ footer {
     }
   }
   &__unversity_name {
+    max-width: 700px;
     text-align: center;
     color: #ffffff;
     font-size: 1.5em;
@@ -104,12 +105,15 @@ footer {
   }
   &__lang {
     select {
-      background: transparent;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: white;
       cursor: pointer;
       width: 70px;
       padding-top: 5px;
       padding-bottom: 5px;
-      padding-left: 5px;
+      padding-left: 2px;
       text-align: center;
       font-size: 1em;
     }

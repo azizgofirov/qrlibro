@@ -1,29 +1,17 @@
 <template>
   <section class="app-tabs -shadow">
     <div class="app-tabs-links">
-      <router-link
-        v-for="(tab, index) in tabs"
-        :key="index"
-        :to="tab.url"
-        class="app-tabs-links__link"
-      >{{ tab.name }}</router-link>
+      <router-link to="/book-list">Каталог книг</router-link>
+      <router-link to="/book-manage">Управление книгами</router-link>
+      <router-link to="/order-list">Заказанные книги</router-link>
+      <router-link to="/statistics">Статистика</router-link>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'AppTabs',
-  data() {
-    return {
-      tabs: [
-        { name: 'Каталог книг', url: '/book-list' },
-        { name: 'Управление книгами', url: '/book-manage' },
-        { name: 'Заказанные книги', url: '/order-list' },
-        { name: 'Статистика', url: '/statistics' }
-      ]
-    }
-  }
+  name: 'AppTabs'
 }
 </script>
 
