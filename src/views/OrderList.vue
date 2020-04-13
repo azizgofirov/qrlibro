@@ -15,9 +15,17 @@
       <table>
         <thead>
           <tr>
-            <th v-for="(header, index) in headers" :key="index">
-              {{ header.name }}
-            </th>
+            <th>{{ $t('orders.headers.number') }}</th>
+            <th>{{ $t('orders.headers.avatar') }}</th>
+            <th>{{ $t('orders.headers.user-info') }}</th>
+            <th>{{ $t('orders.headers.ordered-books') }}</th>
+            <th>{{ $t('orders.headers.book-name') }}</th>
+            <th>{{ $t('orders.headers.date-of-pub') }}</th>
+            <th>{{ $t('orders.headers.author') }}</th>
+            <th>{{ $t('orders.headers.category') }}</th>
+            <th>{{ $t('orders.headers.quantity') }}</th>
+            <th>{{ $t('orders.headers.remained-time') }}</th>
+            <th>{{ $t('orders.headers.took') }}</th>
           </tr>
         </thead>
         <tbody>
@@ -33,16 +41,20 @@
             <td>
               <div class="user-info">
                 <div>
-                  ID: <span>{{ order.user_info.uid }}</span>
+                  {{ $t('orders.body.id') }} :
+                  <span>{{ order.user_info.uid }}</span>
                 </div>
                 <div>
-                  Имя: <span>{{ order.user_info.uname }}</span>
+                  {{ $t('orders.body.name') }}:
+                  <span>{{ order.user_info.uname }}</span>
                 </div>
                 <div>
-                  Факультет: <span>{{ order.user_info.ufaculty }}</span>
+                  {{ $t('orders.body.faculty') }}:
+                  <span>{{ order.user_info.ufaculty }}</span>
                 </div>
                 <div>
-                  Курс: <span>{{ order.user_info.ucourse }}</span>
+                  {{ $t('orders.body.course') }}:
+                  <span>{{ order.user_info.ucourse }}</span>
                 </div>
               </div>
             </td>
@@ -87,20 +99,7 @@ export default {
   data() {
     return {
       orders: [],
-      search: '',
-      headers: [
-        { name: '№' },
-        { name: 'Фото' },
-        { name: 'Данные о студенте' },
-        { name: 'Заказанные книги' },
-        { name: 'Название книги' },
-        { name: 'Дата публикации' },
-        { name: 'Автор' },
-        { name: 'Категория' },
-        { name: 'Количество' },
-        { name: 'Оставщиейся время' },
-        { name: 'Забрал' }
-      ]
+      search: ''
     }
   },
   created() {

@@ -1,0 +1,37 @@
+{
+  "nav-bar": {
+    "book-list": "Kitoblar ro'yhati",
+    "book-manage": "Kitoblarni boshqarish",
+    "order-list": "Zakazlar ro'yhati",
+    "statistics": "Statistika"
+  },
+  "book-card": {
+    "author": "Автор",
+    "book-name": "Название книги",
+    "date-of-get": "Дата получение",
+    "date-of-pub": "Дата публикации",
+    "rating": "Рейтинг"
+  },
+  "orders": {
+    "headers": {
+      "number": "№",
+      "avatar": "Rasm",
+      "user-info": "Student haqida ma'lumot",
+      "ordered-books": "Zakaz qlingan kitoblar",
+      "book-name": "Kitob nomi",
+      "date-of-pub": "Nashr qilingan sana",
+      "author": "Avtor",
+      "category": "Kategoriya",
+      "quantity": "Soni",
+      "remained-time": "Qolgan vaqti",
+      "took": "Oldi"
+    },
+    "body": {
+      "id": "ID",
+      "name": "Ism",
+      "faculty": "Fakultet",
+      "course": "Kurs"
+    }
+  },
+  "search": "Izlash..."
+}

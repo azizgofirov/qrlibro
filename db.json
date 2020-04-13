@@ -458,7 +458,7 @@
       "book_category": "Исторический",
       "book_quantity": "2",
       "remained_time": "--:--",
-      "book_took": "@/assets/img/icons/check.png"
+      "book_took": "https://img.icons8.com/flat_round/48/000000/checked-2.png"
     },
     {
       "id": "2",
@@ -476,7 +476,7 @@
       "book_category": "Исторический",
       "book_quantity": "2",
       "remained_time": "--:--",
-      "book_took": "@/assets/img/icons/close.png"
+      "book_took": "https://img.icons8.com/color/48/000000/close-window.png"
     },
     {
       "id": "3",
@@ -494,7 +494,7 @@
       "book_category": "Исторический",
       "book_quantity": "2",
       "remained_time": "00:13",
-      "book_took": "../assets/img/icons/clock.png"
+      "book_took": "https://img.icons8.com/cute-clipart/64/000000/clock.png"
     }
   ]
 }

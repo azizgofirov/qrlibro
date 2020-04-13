@@ -1,0 +1,37 @@
+{
+  "nav-bar": {
+    "book-list": "Каталог книг",
+    "book-manage": "Управление книгами",
+    "order-list": "Заказанные книги",
+    "statistics": "Статистика"
+  },
+  "book-card": {
+    "author": "Автор",
+    "book-name": "Название книги",
+    "date-of-get": "Дата получение",
+    "date-of-pub": "Дата публикации",
+    "rating": "Рейтинг"
+  },
+  "orders": {
+    "headers": {
+      "number": "№",
+      "avatar": "Фото",
+      "user-info": "Информация о студенте",
+      "ordered-books": "Заказынные книги",
+      "book-name": "Название книги",
+      "date-of-pub": "Дата публикации",
+      "author": "Автор",
+      "category": "Категория",
+      "quantity": "Количество",
+      "remained-time": "Оставщиейся время",
+      "took": "Забрал"
+    },
+    "body": {
+      "id": "ID",
+      "name": "Имя",
+      "faculty": "Факультет",
+      "course": "Курс"
+    }
+  },
+  "search": "Поиск..."
+}

@@ -13,14 +13,16 @@
         </p>
       </div>
       <div class="app-nav-bar__lang">
-        <BaseSelect :options="options" value="Ru" />
+        <LanguageSwitcher />
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import LanguageSwitcher from './LanguageSwitcher'
 export default {
+  components: { LanguageSwitcher },
   data() {
     return {
       options: this.$store.state.options

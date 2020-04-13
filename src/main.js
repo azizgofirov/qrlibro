@@ -6,6 +6,7 @@ import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import 'nprogress/nprogress.css'
 import DateFilter from './filters/date'
+import i18n from './i18n'
 
 Vue.filter('date', DateFilter)
 
@@ -34,5 +35,6 @@ requireComponent.keys().forEach(fileName => {
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')
