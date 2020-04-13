@@ -443,55 +443,58 @@
   ],
   "orders": [
     {
-      "id": 1,
-      "avatar": "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
-      "users_info": {
-        "id": 9217810,
-        "name": "Hamidov Diyor Mannop o'g'li",
-        "faculty": "Finans",
-        "course": 2
+      "id": "1",
+      "uavatar": "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
+      "user_info": {
+        "uid": "9349355",
+        "uname": "Ganiyev Rasulkhuja Abdunosir ugli",
+        "ufaculty": "PMiI",
+        "ucourse": "3"
       },
       "books": "https://humofx.pythonanywhere.com/media/img/20.png",
-      "name": "Амир Темур Сабоклари 3",
-      "author": "Халкаро Амир Темур Хайрия Жамгармаси",
-      "category": "Исторический",
-      "quantity": 2,
+      "book_name": "Амир Темур Сабоклари 3",
+      "date_of_pub": "02.02.2020",
+      "book_author": "Халкаро Амир Темур Хайрия Жамгармаси",
+      "book_category": "Исторический",
+      "book_quantity": "2",
       "remained_time": "--:--",
-      "took": "../assets/img/icons/check.png"
+      "book_took": "@/assets/img/icons/check.png"
     },
     {
-      "id": 2,
-      "avatar": "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
-      "users_info": {
-        "id": 9217810,
-        "name": "Hamidov Diyor Mannop o'g'li",
-        "faculty": "Finans",
-        "course": 2
+      "id": "2",
+      "uavatar": "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
+      "user_info": {
+        "uid": "9217810",
+        "uname": "Hamidov Diyor Mannop o'g'li",
+        "ufaculty": "Finans",
+        "ucourse": "2"
       },
       "books": "https://humofx.pythonanywhere.com/media/img/19.png",
-      "name": "Амир Темур Сабоклари 2",
-      "author": "Халкаро Амир Темур Хайрия Жамгармаси",
-      "category": "Исторический",
-      "quantity": 2,
+      "book_name": "Амир Темур Сабоклари 2",
+      "date_of_pub": "02.02.2020",
+      "book_author": "Халкаро Амир Темур Хайрия Жамгармаси",
+      "book_category": "Исторический",
+      "book_quantity": "2",
       "remained_time": "--:--",
-      "took": "../assets/img/icons/close.png"
+      "book_took": "@/assets/img/icons/close.png"
     },
     {
-      "id": 3,
-      "avatar": "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
-      "users_info": {
-        "id": 9217810,
-        "name": "Hamidov Diyor Mannop o'g'li",
-        "faculty": "Finans",
-        "course": 2
+      "id": "3",
+      "uavatar": "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
+      "user_info": {
+        "uid": "9217810",
+        "uname": "Hamidov Diyor Mannop o'g'li",
+        "ufaculty": "Finans",
+        "ucourse": "2"
       },
       "books": "https://humofx.pythonanywhere.com/media/img/21.png",
-      "name": "Амир Темур Салтанати",
-      "author": "Халкаро Амир Темур Хайрия Жамгармаси",
-      "category": "Исторический",
-      "quantity": 2,
-      "remained_time": "--:13",
-      "took": "../assets/img/icons/clock.png"
+      "book_name": "Амир Темур Салтанати",
+      "date_of_pub": "02.02.2020",
+      "book_author": "Халкаро Амир Темур Хайрия Жамгармаси",
+      "book_category": "Исторический",
+      "book_quantity": "2",
+      "remained_time": "00:13",
+      "book_took": "../assets/img/icons/clock.png"
     }
   ]
 }

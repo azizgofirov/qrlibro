@@ -26,5 +26,11 @@ export default {
   },
   getBook(id) {
     return apiService.get('/books/' + id)
+  },
+  getOrders() {
+    return apiService.get('/orders')
+  },
+  getOrder(id) {
+    return apiService.get('/orders/' + id)
   }
 }

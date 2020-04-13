@@ -19,7 +19,7 @@ export default {
       tabs: [
         { name: 'Каталог книг', url: '/book-list' },
         { name: 'Управление книгами', url: '/book-manage' },
-        { name: 'Заказанные книги', url: '/book-order' },
+        { name: 'Заказанные книги', url: '/order-list' },
         { name: 'Статистика', url: '/statistics' }
       ]
     }
