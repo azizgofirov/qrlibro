@@ -3,7 +3,7 @@
     <div class="app-nav-bar-items">
       <div class="app-nav-bar__logo">
         <router-link to="/">
-          <img src="../assets/img/logo.png" alt="Logo" />
+          <img src="../assets/img/AutoLibLogo.svg" alt="Logo" />
         </router-link>
       </div>
       <div class="app-nav-bar__unversity_name">

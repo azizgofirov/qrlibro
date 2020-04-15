@@ -2,7 +2,7 @@ import axios from 'axios'
 import NProgress from 'nprogress'
 
 const apiService = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'http://libro.pythonanywhere.com',
   withCredentials: false,
   headers: {
     Accept: 'application/json',

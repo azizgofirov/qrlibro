@@ -156,12 +156,6 @@ export default {
 .card:hover {
   transform: scale(1);
 }
-table {
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-  color: #292727;
-}
 th {
   border-bottom: 1px solid black;
 }
