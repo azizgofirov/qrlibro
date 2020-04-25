@@ -6,9 +6,11 @@ import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import 'nprogress/nprogress.css'
 import DateFilter from './filters/date'
+import VueCarousel from 'vue-carousel'
 import i18n from './i18n'
 
 Vue.filter('date', DateFilter)
+Vue.use(VueCarousel)
 
 Vue.config.productionTip = false
 

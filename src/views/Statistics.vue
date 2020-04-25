@@ -15,10 +15,11 @@
           <BarChart :chartdata="chartDataYear" :options="options" />
         </Tab>
       </Tabs>
+      <HorizontalBarChart :chartdata="horizontalBarData" :options="options" />
       <carousel per-page="6" class="carousel" navigationEnabled="true">
         <slide v-for="i in 30" :key="i">
           <div class="carousel-media">
-            <img src="https://via.placeholder.com/150x100" alt="Placeholder">
+            <img src="https://via.placeholder.com/150x100" alt="Placeholder" />
             <div class="carousel-media-text">
               <p>Book name</p>
               <p>Book author</p>
@@ -34,9 +35,10 @@
 import Tab from '../components/Tab'
 import Tabs from '../components/Tabs'
 import BarChart from '../components/BarChart'
+import HorizontalBarChart from '../components/HorizontalBarChart'
 export default {
   name: 'Statistics',
-  components: { BarChart, Tabs, Tab },
+  components: { HorizontalBarChart, BarChart, Tabs, Tab },
   data() {
     return {
       chartDataDay: {
@@ -94,20 +96,7 @@ export default {
         ]
       },
       chartDataMonth: {
-        labels: [
-          'January',
-          'February',
-          'March',
-          'April',
-          'May',
-          'June',
-          'July',
-          'August',
-          'September',
-          'October',
-          'November',
-          'December'
-        ],
+        labels: ['1', '6', '13', '20', '27', '31'],
         datasets: [
           {
             label: 'Статистика',
@@ -165,6 +154,20 @@ export default {
           }
         ]
       },
+      horizontalBarData: {
+        labels: [''],
+        datasets: [
+          {
+            label: 'Статистика',
+            backgroundColor: 'green',
+            pointBackgroundColor: 'white',
+            borderWidth: 1,
+            pointBorderColor: '#249EBF',
+            //Data to be represented on y-axis
+            data: [40, 20, 30, 50, 90, 10, 20]
+          }
+        ]
+      },
       options: {
         scales: {
           yAxes: [
@@ -198,6 +201,7 @@ export default {
 
 <style lang="scss">
 .charts {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -214,6 +218,7 @@ export default {
     }
     &-text {
       p {
+        color: black;
         font-weight: bold;
       }
     }

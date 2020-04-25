@@ -67,6 +67,7 @@ ul.tabs__header > li {
 ul.tabs__header > li.tab__selected {
   font-weight: bolder;
   border: 1px solid;
+  color: black;
 }
 
 .tab {

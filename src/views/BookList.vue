@@ -11,7 +11,9 @@
         />
       </label>
     </div>
-    <BookCard v-for="book in books" :key="book.id" :book="book" />
+    <div class="book-cards">
+      <BookCard v-for="book in book.books" :key="book.id" :book="book" />
+    </div>
   </section>
 </template>
 
@@ -39,4 +41,11 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.book-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  margin-top: 15px;
+}
+</style>

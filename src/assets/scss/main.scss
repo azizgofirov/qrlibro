@@ -11,6 +11,7 @@ body {
   font-family: 'Comfortaa', cursive;
   font-size: $default-font-size;
   background: $background-color;
+  color: $text-color;
 }
 
 * {
@@ -99,7 +100,6 @@ footer {
   &__unversity_name {
     max-width: 700px;
     text-align: center;
-    color: $text-color;
     font-size: 1.5em;
     text-transform: uppercase;
     font-weight: 700;
@@ -141,14 +141,12 @@ footer {
   color: white;
   input {
     background: $primary-color;
-    color: #ffffff;
     border: 1px solid #ff871c;
     width: 500px;
     height: 50px;
     font-size: 16px;
     padding-left: 50px;
     &::placeholder {
-      color: #ffffff;
     }
   }
 }
@@ -181,5 +179,4 @@ table {
   width: 100%;
   text-align: center;
   font-size: 14px;
-  color: $white;
 }
