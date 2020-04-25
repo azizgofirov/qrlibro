@@ -53,5 +53,15 @@
     "UDC": "УДК",
     "university": "Университет",
     "faculty": "Факультет"
+  },
+  "statistics": {
+    "charts": {
+      "tabs": {
+        "per_day": "В День",
+        "per_week": "В Неделе",
+        "per_month": "В Месяц",
+        "per_year": "В Год"
+      }
+    }
   }
 }

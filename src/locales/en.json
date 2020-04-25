@@ -53,5 +53,15 @@
     "UDC": "UDC",
     "university": "University",
     "faculty": "Faculty"
+  },
+  "statistics": {
+    "charts": {
+      "tabs": {
+        "per_day": "Per Day",
+        "per_week": "Per Week",
+        "per_month": "Per Month",
+        "per_year": "Per Year"
+      }
+    }
   }
 }

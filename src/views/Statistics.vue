@@ -2,16 +2,16 @@
   <section class="section-fluid">
     <div class="card charts">
       <Tabs>
-        <Tab title="Per Day">
+        <Tab :title="$t('statistics.charts.tabs.per_day')">
           <BarChart :chartdata="chartDataDay" :options="options" />
         </Tab>
-        <Tab title="Per Week">
+        <Tab :title="$t('statistics.charts.tabs.per_week')">
           <BarChart :chartdata="chartDataWeek" :options="options" />
         </Tab>
-        <Tab title="Per Months">
+        <Tab :title="$t('statistics.charts.tabs.per_month')">
           <BarChart :chartdata="chartDataMonth" :options="options" />
         </Tab>
-        <Tab title="Per Year">
+        <Tab :title="$t('statistics.charts.tabs.per_year')">
           <BarChart :chartdata="chartDataYear" :options="options" />
         </Tab>
       </Tabs>

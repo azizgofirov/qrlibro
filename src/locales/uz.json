@@ -53,5 +53,15 @@
     "UDC": "UDK",
     "university": "Universitet",
     "faculty": "Fakultet"
+  },
+  "statistics": {
+    "charts": {
+      "tabs": {
+        "per_day": "Kunda",
+        "per_week": "Haftada",
+        "per_month": "Oyda",
+        "per_year": "Yilda"
+      }
+    }
   }
 }
