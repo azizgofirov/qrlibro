@@ -13,9 +13,7 @@ export default {
   name: 'LanguageSwitcher',
   data() {
     return {
-      langs: [
-        'ru', 'uz', 'en'
-      ]
+      langs: ['ru', 'uz', 'en']
     }
   }
 }
