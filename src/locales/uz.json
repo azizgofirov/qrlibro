@@ -33,5 +33,25 @@
       "course": "Kurs"
     }
   },
-  "search": "Izlash..."
+  "search": "Izlash...",
+  "book-show": {
+    "name": "Nomi",
+    "author": "Muallif",
+    "key_words": "Kalit so'zlar",
+    "quantity": "Soni",
+    "price": "Narix",
+    "rating": "Reyting",
+    "used": "Ishlatildi",
+    "electronic_version": "Electron versiyasi",
+    "file": "Fayl",
+    "has_printed_version": "Chop qilingan versiyasi",
+    "is_rare_book": "Noyob kitob",
+    "is_tutorial": "Darslik",
+    "date_of_pub": "Nashr qilingan sana",
+    "date_of_get": "Qabul qilingan kun",
+    "date_of_created": "Qoshilgan kun",
+    "UDC": "UDK",
+    "university": "Universitet",
+    "faculty": "Fakultet"
+  }
 }

@@ -33,5 +33,25 @@
       "course": "Курс"
     }
   },
-  "search": "Поиск..."
+  "search": "Поиск...",
+  "book-show": {
+    "name": "Название",
+    "author": "Автор",
+    "key_words": "Ключевые слова",
+    "quantity": "Количество",
+    "price": "Цена",
+    "rating": "Рейтинг",
+    "used": "Использовано",
+    "electronic_version": "Электронная версия",
+    "file": "Файл",
+    "has_printed_version": "Печатная версия",
+    "is_rare_book": "Редкая книга",
+    "is_tutorial": "Учебник",
+    "date_of_pub": "Дата публикации",
+    "date_of_get": "Дата получения",
+    "date_of_created": "Дата создания",
+    "UDC": "УДК",
+    "university": "Университет",
+    "faculty": "Факультет"
+  }
 }

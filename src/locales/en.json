@@ -33,5 +33,25 @@
       "course": "Course"
     }
   },
-  "search": "Search..."
+  "search": "Search...",
+  "book-show": {
+    "name": "Name",
+    "author": "Author",
+    "key_words": "Key words",
+    "quantity": "Quantity",
+    "price": "Price",
+    "rating": "Rating",
+    "used": "Used",
+    "electronic_version": "Electronic version",
+    "file": "File",
+    "has_printed_version": "Printed version",
+    "is_rare_book": "Rare book",
+    "is_tutorial": "Tutorial",
+    "date_of_pub": "Date of publication",
+    "date_of_get": "Data of getting",
+    "date_of_created": "Date of created",
+    "UDC": "UDC",
+    "university": "University",
+    "faculty": "Faculty"
+  }
 }
