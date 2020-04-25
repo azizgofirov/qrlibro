@@ -12,7 +12,7 @@
       </label>
     </div>
     <div class="book-cards">
-      <BookCard v-for="book in book.books" :key="book.id" :book="book" />
+      <BookCard v-for="book in filteredBook" :key="book.id" :book="book" />
     </div>
   </section>
 </template>
@@ -36,7 +36,16 @@ export default {
     })
   },
   computed: {
-    ...mapState(['books', 'book'])
+    ...mapState(['books', 'book']),
+    filteredBook() {
+      return this.book.books.filter(data => {
+        let author = data.Автор.toLowerCase().match(this.search.toLowerCase())
+        let book_name = data.Название
+          .toLowerCase()
+          .match(this.search.toLowerCase())
+        return author || book_name
+      })
+    }
   }
 }
 </script>
