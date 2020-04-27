@@ -7,7 +7,7 @@
           class="-shadow"
           type="search"
           v-model="search"
-          placeholder="Поиск. . ."
+          :placeholder="$t('search')"
         />
       </label>
     </div>
@@ -28,66 +28,66 @@
             <th>{{ $t('orders.headers.took') }}</th>
           </tr>
         </thead>
-        <tbody>
-          <tr v-for="(order, index) in filteredOrders" :key="index">
-            <td>
-              <div class="order-id">{{ order.id }}</div>
-            </td>
-            <td>
-              <div class="user-avatar">
-                <img :src="order.uavatar" alt="Avatar" />
-              </div>
-            </td>
-            <td>
-              <div class="user-info">
-                <div>
-                  {{ $t('orders.body.id') }} :
-                  <span>{{ order.user_info.uid }}</span>
-                </div>
-                <div>
-                  {{ $t('orders.body.name') }}:
-                  <span>{{ order.user_info.uname }}</span>
-                </div>
-                <div>
-                  {{ $t('orders.body.faculty') }}:
-                  <span>{{ order.user_info.ufaculty }}</span>
-                </div>
-                <div>
-                  {{ $t('orders.body.course') }}:
-                  <span>{{ order.user_info.ucourse }}</span>
-                </div>
-              </div>
-            </td>
-            <td>
-              <div class="order-books">
-                <img :src="order.books" alt="Books" />
-              </div>
-            </td>
-            <td>
-              <div class="order-name">{{ order.book_name }}</div>
-            </td>
-            <td>
-              <div class="order-name">{{ order.date_of_pub }}</div>
-            </td>
-            <td>
-              <div class="order-author">{{ order.book_author }}</div>
-            </td>
-            <td>
-              <div class="order-author">{{ order.book_category }}</div>
-            </td>
-            <td>
-              <div class="order-quantity">{{ order.book_quantity }}</div>
-            </td>
-            <td>
-              <div class="order-remained_time">{{ order.remained_time }}</div>
-            </td>
-            <td>
-              <div class="order-took">
-                <img :src="order.took" alt="Took" />
-              </div>
-            </td>
-          </tr>
-        </tbody>
+        <!--        <tbody>-->
+        <!--          <tr v-for="(order, index) in filteredOrders" :key="index">-->
+        <!--            <td>-->
+        <!--              <div class="order-id">{{ order.id }}</div>-->
+        <!--            </td>-->
+        <!--            <td>-->
+        <!--              <div class="user-avatar">-->
+        <!--                <img :src="order.uavatar" alt="Avatar" />-->
+        <!--              </div>-->
+        <!--            </td>-->
+        <!--            <td>-->
+        <!--              <div class="user-info">-->
+        <!--                <div>-->
+        <!--                  {{ $t('orders.body.id') }} :-->
+        <!--                  <span>{{ order.user_info.uid }}</span>-->
+        <!--                </div>-->
+        <!--                <div>-->
+        <!--                  {{ $t('orders.body.name') }}:-->
+        <!--                  <span>{{ order.user_info.uname }}</span>-->
+        <!--                </div>-->
+        <!--                <div>-->
+        <!--                  {{ $t('orders.body.faculty') }}:-->
+        <!--                  <span>{{ order.user_info.ufaculty }}</span>-->
+        <!--                </div>-->
+        <!--                <div>-->
+        <!--                  {{ $t('orders.body.course') }}:-->
+        <!--                  <span>{{ order.user_info.ucourse }}</span>-->
+        <!--                </div>-->
+        <!--              </div>-->
+        <!--            </td>-->
+        <!--            <td>-->
+        <!--              <div class="order-books">-->
+        <!--                <img :src="order.books" alt="Books" />-->
+        <!--              </div>-->
+        <!--            </td>-->
+        <!--            <td>-->
+        <!--              <div class="order-name">{{ order.book_name }}</div>-->
+        <!--            </td>-->
+        <!--            <td>-->
+        <!--              <div class="order-name">{{ order.date_of_pub }}</div>-->
+        <!--            </td>-->
+        <!--            <td>-->
+        <!--              <div class="order-author">{{ order.book_author }}</div>-->
+        <!--            </td>-->
+        <!--            <td>-->
+        <!--              <div class="order-author">{{ order.book_category }}</div>-->
+        <!--            </td>-->
+        <!--            <td>-->
+        <!--              <div class="order-quantity">{{ order.book_quantity }}</div>-->
+        <!--            </td>-->
+        <!--            <td>-->
+        <!--              <div class="order-remained_time">{{ order.remained_time }}</div>-->
+        <!--            </td>-->
+        <!--            <td>-->
+        <!--              <div class="order-took">-->
+        <!--                <img :src="order.took" alt="Took" />-->
+        <!--              </div>-->
+        <!--            </td>-->
+        <!--          </tr>-->
+        <!--        </tbody>-->
       </table>
     </div>
   </section>

@@ -9,12 +9,12 @@
         />
         <div class="card-content-text">
           <p class="card-content-text__title">
-            {{ $t('book-card.author') }}:
-            <span class="card-content-text__subtitle">{{ book.Автор }}</span>
-          </p>
-          <p class="card-content-text__title">
             {{ $t('book-card.book-name') }}:
             <span class="card-content-text__subtitle">{{ book.Название }}</span>
+          </p>
+          <p class="card-content-text__title">
+            {{ $t('book-card.author') }}:
+            <span class="card-content-text__subtitle">{{ book.Автор }}</span>
           </p>
           <p class="card-content-text__title">
             {{ $t('book-card.date-of-pub') }}:
@@ -24,9 +24,7 @@
           </p>
           <p class="card-content-text__title">
             {{ $t('book-card.date-of-get') }}:
-            <span class="card-content-text__subtitle">{{
-              book.Получено
-            }}</span>
+            <span class="card-content-text__subtitle">{{ book.Получено }}</span>
           </p>
           <p class="card-content-text__title">
             {{ $t('book-card.rating') }}:

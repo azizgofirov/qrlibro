@@ -7,7 +7,7 @@
           class="-shadow"
           type="search"
           v-model="search"
-          placeholder="Поиск. . ."
+          :placeholder="$t('search')"
         />
       </label>
     </div>

@@ -155,16 +155,30 @@ export default {
         ]
       },
       horizontalBarData: {
-        labels: [''],
         datasets: [
           {
-            label: 'Статистика',
-            backgroundColor: 'green',
+            label: 'First person',
+            backgroundColor: 'lightgreen',
             pointBackgroundColor: 'white',
             borderWidth: 1,
             pointBorderColor: '#249EBF',
-            //Data to be represented on y-axis
-            data: [40, 20, 30, 50, 90, 10, 20]
+            data: [374]
+          },
+          {
+            label: 'Second person',
+            backgroundColor: 'aqua',
+            pointBackgroundColor: 'white',
+            borderWidth: 1,
+            pointBorderColor: '#249EBF',
+            data: [280]
+          },
+          {
+            label: 'Third person',
+            backgroundColor: 'blue',
+            pointBackgroundColor: 'white',
+            borderWidth: 1,
+            pointBorderColor: '#249EBF',
+            data: [270]
           }
         ]
       },
