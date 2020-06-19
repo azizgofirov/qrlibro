@@ -3,7 +3,8 @@
     "book-list": "Каталог книг",
     "book-manage": "Управление книгами",
     "order-list": "Заказанные книги",
-    "statistics": "Статистика"
+    "statistics": "Статистика",
+    "retrieved-books": "Сданные книги"
   },
   "book-card": {
     "author": "Автор",
@@ -19,10 +20,10 @@
       "user-info": "Информация о студенте",
       "ordered-books": "Заказынные книги",
       "book-name": "Название книги",
+      "ISBN": "ISBN",
       "date-of-pub": "Дата публикации",
       "author": "Автор",
-      "category": "Категория",
-      "quantity": "Количество",
+      "udc": "УДК",
       "remained-time": "Оставщиейся время",
       "took": "Забрал"
     },

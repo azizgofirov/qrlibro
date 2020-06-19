@@ -20,132 +20,182 @@
             <th>{{ $t('orders.headers.user-info') }}</th>
             <th>{{ $t('orders.headers.ordered-books') }}</th>
             <th>{{ $t('orders.headers.book-name') }}</th>
+            <th>{{ $t('orders.headers.ISBN') }}</th>
             <th>{{ $t('orders.headers.date-of-pub') }}</th>
             <th>{{ $t('orders.headers.author') }}</th>
-            <th>{{ $t('orders.headers.category') }}</th>
-            <th>{{ $t('orders.headers.quantity') }}</th>
+            <th>{{ $t('orders.headers.udc') }}</th>
             <th>{{ $t('orders.headers.remained-time') }}</th>
             <th>{{ $t('orders.headers.took') }}</th>
           </tr>
         </thead>
-        <!--        <tbody>-->
-        <!--          <tr v-for="(order, index) in filteredOrders" :key="index">-->
-        <!--            <td>-->
-        <!--              <div class="order-id">{{ order.id }}</div>-->
-        <!--            </td>-->
-        <!--            <td>-->
-        <!--              <div class="user-avatar">-->
-        <!--                <img :src="order.uavatar" alt="Avatar" />-->
-        <!--              </div>-->
-        <!--            </td>-->
-        <!--            <td>-->
-        <!--              <div class="user-info">-->
-        <!--                <div>-->
-        <!--                  {{ $t('orders.body.id') }} :-->
-        <!--                  <span>{{ order.user_info.uid }}</span>-->
-        <!--                </div>-->
-        <!--                <div>-->
-        <!--                  {{ $t('orders.body.name') }}:-->
-        <!--                  <span>{{ order.user_info.uname }}</span>-->
-        <!--                </div>-->
-        <!--                <div>-->
-        <!--                  {{ $t('orders.body.faculty') }}:-->
-        <!--                  <span>{{ order.user_info.ufaculty }}</span>-->
-        <!--                </div>-->
-        <!--                <div>-->
-        <!--                  {{ $t('orders.body.course') }}:-->
-        <!--                  <span>{{ order.user_info.ucourse }}</span>-->
-        <!--                </div>-->
-        <!--              </div>-->
-        <!--            </td>-->
-        <!--            <td>-->
-        <!--              <div class="order-books">-->
-        <!--                <img :src="order.books" alt="Books" />-->
-        <!--              </div>-->
-        <!--            </td>-->
-        <!--            <td>-->
-        <!--              <div class="order-name">{{ order.book_name }}</div>-->
-        <!--            </td>-->
-        <!--            <td>-->
-        <!--              <div class="order-name">{{ order.date_of_pub }}</div>-->
-        <!--            </td>-->
-        <!--            <td>-->
-        <!--              <div class="order-author">{{ order.book_author }}</div>-->
-        <!--            </td>-->
-        <!--            <td>-->
-        <!--              <div class="order-author">{{ order.book_category }}</div>-->
-        <!--            </td>-->
-        <!--            <td>-->
-        <!--              <div class="order-quantity">{{ order.book_quantity }}</div>-->
-        <!--            </td>-->
-        <!--            <td>-->
-        <!--              <div class="order-remained_time">{{ order.remained_time }}</div>-->
-        <!--            </td>-->
-        <!--            <td>-->
-        <!--              <div class="order-took">-->
-        <!--                <img :src="order.took" alt="Took" />-->
-        <!--              </div>-->
-        <!--            </td>-->
-        <!--          </tr>-->
-        <!--        </tbody>-->
+        <tbody>
+          <!--          <tr v-for="(order, index) in filteredOrders" :key="index">-->
+          <!--            <td>-->
+          <!--              <div class="order-id">{{ order.id }}</div>-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <div class="user-avatar">-->
+          <!--                <img :src="order.uavatar" alt="Avatar" />-->
+          <!--              </div>-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <div class="user-info">-->
+          <!--                <div>-->
+          <!--                  {{ $t('orders.body.id') }} :-->
+          <!--                  <span>{{ order.user_info.uid }}</span>-->
+          <!--                </div>-->
+          <!--                <div>-->
+          <!--                  {{ $t('orders.body.name') }}:-->
+          <!--                  <span>{{ order.user_info.uname }}</span>-->
+          <!--                </div>-->
+          <!--                <div>-->
+          <!--                  {{ $t('orders.body.faculty') }}:-->
+          <!--                  <span>{{ order.user_info.ufaculty }}</span>-->
+          <!--                </div>-->
+          <!--                <div>-->
+          <!--                  {{ $t('orders.body.course') }}:-->
+          <!--                  <span>{{ order.user_info.ucourse }}</span>-->
+          <!--                </div>-->
+          <!--              </div>-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <div class="order-books">-->
+          <!--                <img :src="order.books" alt="Books" />-->
+          <!--              </div>-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <div class="order-name">{{ order.book_name }}</div>-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <div class="order-date_of_pub">{{ order.date_of_pub }}</div>-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <div class="order-author">{{ order.book_author }}</div>-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <div class="order-author">{{ order.book_category }}</div>-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <div class="order-quantity">{{ order.book_quantity }}</div>-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <div class="order-remained_time">{{ order.remained_time }}</div>-->
+          <!--            </td>-->
+          <!--            <td>-->
+          <!--              <div class="order-took">-->
+          <!--                <img :src="order.took" alt="Took" />-->
+          <!--              </div>-->
+          <!--            </td>-->
+          <!--          </tr>-->
+        </tbody>
+        <tr v-for="(filledOrder, index) in filledOrders" :key="index">
+          <td>
+            <div class="order-id">
+              {{ index + 1 }}
+            </div>
+          </td>
+          <td>
+            <div class="user-avatar">
+              <img
+                :src="`https://libro.pythonanywhere.com/` + filledOrder.Аватар"
+                alt=""
+              />
+            </div>
+          </td>
+          <td>
+            <div class="user-info">
+              <div>
+                {{ $t('orders.body.id') }} :
+                <span>{{ filledOrder.qr_number }}</span>
+              </div>
+              <div>
+                {{ $t('orders.body.name') }}:
+                <span>{{ filledOrder.full_name }}</span>
+              </div>
+              <div>
+                {{ $t('orders.body.faculty') }}:
+                <span>{{ filledOrder.faculty }}</span>
+              </div>
+              <div>
+                {{ $t('orders.body.course') }}:
+                <span>{{ filledOrder.course }}</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="order-books">
+              <img
+                :src="`https://libro.pythonanywhere.com/` + filledOrder.img"
+                alt=""
+              />
+            </div>
+          </td>
+          <td>
+            <div class="order-name">
+              {{ filledOrder.title }}
+            </div>
+          </td>
+          <td>
+            <div class="order-book-isbn">
+              {{ filledOrder.isbn }}
+            </div>
+          </td>
+          <td>
+            <div class="order-date_pub">
+              {{ filledOrder.date_pub }}
+            </div>
+          </td>
+          <td>
+            <div class="order-author">
+              {{ filledOrder.author }}
+            </div>
+          </td>
+          <td>
+            <div class="order-udc">
+              {{ filledOrder.udc }}
+            </div>
+          </td>
+          <td>
+            <div class="order-remained_time">
+              {{ now }}
+            </div>
+          </td>
+        </tr>
       </table>
     </div>
   </section>
 </template>
 
 <script>
-import ApiService from '../services/ApiService'
+import store from '@/store'
+import { mapState } from 'vuex'
 export default {
   data() {
     return {
-      orders: [],
       search: ''
     }
   },
-  created() {
-    ApiService.getOrders()
-      .then(response => {
-        this.orders = response.data
-      })
-      .catch(error => {
-        console.log(error.message)
-      })
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    store.dispatch('book/fetchBooks')
+    store.dispatch('user/fetchUsers')
+    store.dispatch('order/fetchOrders').then(() => {
+      next()
+    })
+  },
+  beforeRouteUpdate(routeTo, routeFrom, next) {
+    store.dispatch('book/fetchBooks')
+    store.dispatch('user/fetchUsers')
+    store.dispatch('order/fetchOrders').then(() => {
+      next()
+    })
   },
   computed: {
-    filteredOrders() {
-      return this.orders.filter(data => {
-        let id = data.id.toLowerCase().match(this.search.toLowerCase())
-        let uid = data.user_info.uid
-          .toLowerCase()
-          .match(this.search.toLowerCase())
-        let uname = data.user_info.uname
-          .toLowerCase()
-          .match(this.search.toLowerCase())
-        let ucourse = data.user_info.ucourse
-          .toLowerCase()
-          .match(this.search.toLowerCase())
-        let ufaculty = data.user_info.ufaculty
-          .toLowerCase()
-          .match(this.search.toLowerCase())
-        let book_name = data.book_name
-          .toLowerCase()
-          .match(this.search.toLowerCase())
-        let book_author = data.book_author
-          .toLowerCase()
-          .match(this.search.toLowerCase())
-        let book_quantity = data.book_quantity
-          .toLowerCase()
-          .match(this.search.toLowerCase())
-        return (
-          id ||
-          uname ||
-          uid ||
-          ucourse ||
-          ufaculty ||
-          book_name ||
-          book_author ||
-          book_quantity
-        )
+    ...mapState(['order', 'orders', 'user', 'users', 'book', 'books']),
+    filledOrders() {
+      return this.order.orders.map(order => {
+        const book = this.book.books.find(book => order.book_id === book.id)
+        const user = this.user.users.find(user => order.user === user.id)
+        return { ...order, ...book, ...user }
       })
     }
   }

@@ -3,7 +3,8 @@
     "book-list": "Book list",
     "book-manage": "Manage books",
     "order-list": "Orders",
-    "statistics": "Statistics"
+    "statistics": "Statistics",
+    "retrieved-books": "Retrieved books"
   },
   "book-card": {
     "author": "Автор",
@@ -19,10 +20,10 @@
       "user-info": "Student info",
       "ordered-books": "Ordered books",
       "book-name": "Book name",
+      "ISBN": "ISBN",
       "date-of-pub": "Date of pub",
       "author": "Author",
-      "category": "Category",
-      "quantity": "Quantity",
+      "udc": "UDC",
       "remained-time": "Remained time",
       "took": "Took"
     },

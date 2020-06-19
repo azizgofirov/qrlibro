@@ -465,7 +465,7 @@
       "uavatar": "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
       "user_info": {
         "uid": "9217810",
-        "uname": "Hamidov Diyor Mannop o'g'li",
+        "uname": "Hamidov Diyor Mannop ogli",
         "ufaculty": "Finans",
         "ucourse": "2"
       },
@@ -483,7 +483,7 @@
       "uavatar": "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460",
       "user_info": {
         "uid": "9217810",
-        "uname": "Hamidov Diyor Mannop o'g'li",
+        "uname": "Hamidov Diyor Mannop ogli",
         "ufaculty": "Finans",
         "ucourse": "2"
       },
@@ -495,6 +495,146 @@
       "book_quantity": "2",
       "remained_time": "00:13",
       "book_took": "https://img.icons8.com/cute-clipart/64/000000/clock.png"
+    }
+  ],
+  "statistics": [
+    {
+      "id": 0,
+      "labels": [
+        "10:00", "12:00", "2:00", "4:00", "6:00", "8:00"
+      ],
+      "datasets": [
+        {
+          "label": "Статистика",
+          "backgroundColor": "green",
+          "pointBackgroundColor": "white",
+          "borderWidth": 1,
+          "pointBorderColor": "#249EBF",
+          "data": [40, 20, 30, 50, 90, 10]
+        },
+        {
+          "label": "Не Статистика",
+          "backgroundColor": "",
+          "pointBackgroundColor": "white",
+          "borderWidth": 1,
+          "pointBorderColor": "#249EBF",
+          "data": [30, 10, 20, 40, 80, 0]
+        }
+      ]
+    },
+    {
+
+        "labels": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "datasets": [
+          {
+            "label": "Статистика",
+            "backgroundColor": "green",
+            "pointBackgroundColor": "white",
+            "borderWidth": 1,
+            "pointBorderColor": "#249EBF",
+            "data": [40, 20, 30, 50, 90, 10, 20]
+          },
+          {
+            "label": "Не Статистика",
+            "backgroundColor": "red",
+            "pointBackgroundColor": "white",
+            "borderWidth": 1,
+            "pointBorderColor": "#249EBF",
+            "data": [30, 10, 20, 40, 80, 0, 10]
+          }
+        ]
+    },
+    {
+      "labels": ["1", "6", "13", "20", "27", "31"],
+      "datasets": [
+        {
+          "label": "Статистика",
+          "backgroundColor": "green",
+          "pointBackgroundColor": "white",
+          "borderWidth": 1,
+          "pointBorderColor": "#249EBF",
+          "data": [40, 20, 30, 50, 90, 10, 20, 40, 50, 70, 90, 100]
+        },
+        {
+          "label": "Не Статистика",
+          "backgroundColor": "red",
+          "pointBackgroundColor": "white",
+          "borderWidth": 1,
+          "pointBorderColor": "#249EBF",
+          "data": [30, 10, 20, 40, 80, 0, 10, 30, 40, 60, 80, 90]
+        }
+      ]
+
+    },
+    {
+      "labels": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "datasets": [
+        {
+          "label": "Статистика",
+          "backgroundColor": "green",
+          "pointBackgroundColor": "white",
+          "borderWidth": 1,
+          "pointBorderColor": "#249EBF",
+          "data": [40, 20, 30, 50, 90, 10, 20, 40, 50, 70, 90, 100]
+        },
+        {
+          "label": "Не Статистика",
+          "backgroundColor": "red",
+          "pointBackgroundColor": "white",
+          "borderWidth": 1,
+          "pointBorderColor": "#249EBF",
+          "data": [30, 10, 20, 40, 80, 0, 10, 30, 40, 60, 80, 90]
+        }
+      ]
+    },
+    {
+      "datasets": [
+        {
+          "label": "First person",
+          "backgroundColor": "lightgreen",
+          "pointBackgroundColor": "white",
+          "borderWidth": 1,
+          "pointBorderColor": "#249EBF",
+          "data": [374]
+        },
+        {
+          "label": "Second person",
+          "backgroundColor": "aqua",
+          "pointBackgroundColor": "white",
+          "borderWidth": 1,
+          "pointBorderColor": "#249EBF",
+          "data": [280]
+        },
+        {
+          "label": "Third person",
+          "backgroundColor": "blue",
+          "pointBackgroundColor": "white",
+          "borderWidth": 1,
+          "pointBorderColor": "#249EBF",
+          "data": [270]
+        }
+      ]
     }
   ]
 }

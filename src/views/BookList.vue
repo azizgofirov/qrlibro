@@ -39,8 +39,8 @@ export default {
     ...mapState(['books', 'book']),
     filteredBook() {
       return this.book.books.filter(data => {
-        let author = data.Автор.toLowerCase().match(this.search.toLowerCase())
-        let book_name = data.Название
+        let author = data.author.toLowerCase().match(this.search.toLowerCase())
+        let book_name = data.title
           .toLowerCase()
           .match(this.search.toLowerCase())
         return author || book_name

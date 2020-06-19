@@ -3,7 +3,8 @@
     "book-list": "Kitoblar ro'yhati",
     "book-manage": "Kitoblarni boshqarish",
     "order-list": "Zakazlar ro'yhati",
-    "statistics": "Statistika"
+    "statistics": "Statistika",
+    "retrieved-books": "Topshirilgan kitoblar"
   },
   "book-card": {
     "author": "Автор",
@@ -19,10 +20,10 @@
       "user-info": "Student haqida ma'lumot",
       "ordered-books": "Zakaz qlingan kitoblar",
       "book-name": "Kitob nomi",
+      "ISBN": "ISBN",
       "date-of-pub": "Nashr qilingan sana",
-      "author": "Avtor",
-      "category": "Kategoriya",
-      "quantity": "Soni",
+      "author": "Muallif",
+      "udc": "UDK",
       "remained-time": "Qolgan vaqti",
       "took": "Oldi"
     },
@@ -39,10 +40,10 @@
     "author": "Muallif",
     "key_words": "Kalit so'zlar",
     "quantity": "Soni",
-    "price": "Narix",
+    "price": "Narx",
     "rating": "Reyting",
     "used": "Ishlatildi",
-    "electronic_version": "Electron versiyasi",
+    "electronic_version": "Elektron versiyasi",
     "file": "Fayl",
     "has_printed_version": "Chop qilingan versiyasi",
     "is_rare_book": "Noyob kitob",

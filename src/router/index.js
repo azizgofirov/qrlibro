@@ -9,6 +9,7 @@ import Statistics from '@/views/Statistics.vue'
 import NotFound from '@/views/NotFound.vue'
 import NProgress from 'nprogress'
 import store from '@/store'
+import RetrievedBooks from '../views/RetrievedBooks'
 
 Vue.use(VueRouter)
 
@@ -45,6 +46,11 @@ const routes = [
     path: '/order-list',
     name: 'order-list',
     component: OrderList
+  },
+  {
+    path: '/retrieved-books',
+    name: 'retrieved-books',
+    component: RetrievedBooks
   },
   {
     path: '/statistics',

@@ -3,6 +3,7 @@ import NProgress from 'nprogress'
 
 const apiService = axios.create({
   baseURL: 'https://libro.pythonanywhere.com',
+  // baseURL: 'http://localhost:3000',
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -32,5 +33,14 @@ export default {
   },
   getOrder(id) {
     return apiService.get('/orders/' + id)
+  },
+  getStatistics() {
+    return apiService.get('/statistics')
+  },
+  getUsers() {
+    return apiService.get('/user')
+  },
+  getUser(id) {
+    return apiService.get('/user/' + id)
   }
 }
