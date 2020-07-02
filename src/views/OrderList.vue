@@ -28,7 +28,7 @@
             <th>{{ $t('orders.headers.took') }}</th>
           </tr>
         </thead>
-        <tr v-for="(searchedOrder, index) in filledOrders" :key="index">
+        <tr v-for="(searchedOrder, index) in searchedOrders" :key="index">
           <td>
             <div class="order-id">
               {{ index + 1 }}
@@ -153,15 +153,15 @@ export default {
         const user = this.user.users.find(user => order.user === user.id)
         return { ...order, ...book, ...user }
       })
+    },
+    searchedOrders() {
+      return this.filledOrders.filter(data => {
+        let full_name = data.full_name
+          .toLowerCase()
+          .match(this.search.toLowerCase())
+        return full_name
+      })
     }
-    // searchedOrders() {
-    //   return this.filledOrders.filter(data => {
-    //     let full_name = data.full_name
-    //       .toLowerCase()
-    //       .match(this.search.toLowerCase())
-    //     return full_name
-    //   })
-    // }
     // orderRemainedTime() {
     //   return (
     //     Date.parse(this.filledOrders.time_of_order) -
