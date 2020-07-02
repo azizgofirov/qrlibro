@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:400,500,700&display=swap&subset=cyrillic');
 @import "variables";
+@import "normalize";
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -21,7 +22,7 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -50,7 +51,7 @@ h6 {
 }
 
 .-shadow {
-  box-shadow: 0 0.063rem 0.125rem 0 rgba(0, 0, 0, 0.2), 0 0.063rem 0.313rem 0 rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.2), 0 0.1rem 0.5rem 0 rgba(0, 0, 0, 0.13);
 }
 
 li {
@@ -60,7 +61,7 @@ li {
 section,
 header,
 footer {
-  padding: 0 0.938rem;
+  padding: 0 1.5rem;
 }
 
 .section-fluid,
@@ -70,39 +71,40 @@ footer {
 }
 
 .card {
-  padding-top: 10px;
-  margin-top: 20px;
+  margin: 0.5rem;
   background-color: $card-background;
   transition: all 0.2s linear;
+
   &:hover {
-    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2) 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0.3rem 1.2rem 0 rgba(0, 0, 0, 0.2) 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+
   }
 }
 
 .app-nav-bar {
   background: $primary-color;
-  -webkit-box-shadow: 0 6px 5px 0 rgba(247, 255, 255, 0.5);
-  -moz-box-shadow: 0 6px 5px 0 rgba(247, 255, 255, 0.5);
-  box-shadow: 0 6px 5px 0 rgba(247, 255, 255, 0.5);
+  -webkit-box-shadow: 0 0.6rem 0.5rem 0 rgba(247, 255, 255, 0.5);
+  -moz-box-shadow: 0 0.6rem 0.5rem 0 rgba(247, 255, 255, 0.5);
+  box-shadow: 0 0.6rem 0.5rem 0 rgba(247, 255, 255, 0.5);
   &-items {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   &__logo {
     img {
-      height: 72px;
-      width: 96px;
+      height: 6.0rem;
+      width: 7.0rem;
     }
   }
   &__unversity_name {
-    max-width: 700px;
+    max-width: 70rem;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.6rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: $bold;
   }
   &__lang {
     select {
@@ -111,12 +113,12 @@ footer {
       appearance: none;
       background: white;
       cursor: pointer;
-      width: 70px;
+      width: 5rem;
       padding-top: 5px;
       padding-bottom: 5px;
       padding-left: 2px;
       text-align: center;
-      font-size: 1em;
+      font-size: 1.5em;
     }
   }
 }
@@ -143,7 +145,7 @@ footer {
   input {
     background: $primary-color;
     border: 1px solid #ff871c;
-    width: 500px;
+    width: 31rem;
     height: 50px;
     font-size: 16px;
     padding-left: 50px;
@@ -175,9 +177,78 @@ footer {
   }
 }
 
-table {
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
+.book-list-card {
+  width: 270px;
+  height: 270px;
+  position: relative;
+  &:hover {
+    .front {
+      transform: perspective(600px) rotateY(-180deg);
+
+    }
+
+    .back {
+      transform: perspective(600px) rotateY(0);
+
+    }
+  }
+  .front,
+  .back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 0.4s ease;
+    position: absolute;
+  }
+  .front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: perspective(600px) rotateY(0);
+    img {
+      border-radius: 10px;
+      width: 95%;
+      height: 95%;
+    }
+  }
+  .back {
+    transform: perspective(600px) rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
 }
 
+table {
+  text-align: center;
+  font-size: 0.9rem;
+  display: grid;
+  border-collapse: collapse;
+  min-width: 100%;
+  grid-template-columns:
+    minmax(0.3rem, 0.33fr)
+    minmax(0.9rem, 1fr)
+    minmax(0.9rem, 2fr)
+    minmax(0.9rem, 1fr)
+    minmax(0.9rem, 1.33fr)
+    minmax(0.9rem, 1fr)
+    minmax(0.9rem, 1fr)
+    minmax(0.9rem, 1fr)
+    minmax(0.9rem, 0.67fr)
+    minmax(0.9rem, 1fr)
+    minmax(0.3rem, 0.67fr);
+}
+thead,
+tbody,
+tr {
+  display: contents;
+}
+td,
+th {
+  padding: 0.5rem;
+  overflow: hidden;
+}

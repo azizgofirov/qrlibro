@@ -21,4 +21,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.tab {
+  font-size: 1.5rem;
+}
+</style>

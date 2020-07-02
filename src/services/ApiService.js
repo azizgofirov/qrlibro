@@ -1,5 +1,5 @@
 import axios from 'axios'
-import NProgress from 'nprogress'
+// import NProgress from 'nprogress'
 
 const apiService = axios.create({
   baseURL: 'https://libro.pythonanywhere.com',
@@ -11,15 +11,15 @@ const apiService = axios.create({
   }
 })
 
-apiService.interceptors.request.use(config => {
-  NProgress.start()
-  return config
-})
+// apiService.interceptors.request.use(config => {
+//   NProgress.start()
+//   return config
+// })
 
-apiService.interceptors.response.use(response => {
-  NProgress.done()
-  return response
-})
+// apiService.interceptors.response.use(response => {
+//   NProgress.done()
+//   return response
+// })
 
 export default {
   getBooks() {

@@ -28,67 +28,7 @@
             <th>{{ $t('orders.headers.took') }}</th>
           </tr>
         </thead>
-        <tbody>
-          <!--          <tr v-for="(order, index) in filteredOrders" :key="index">-->
-          <!--            <td>-->
-          <!--              <div class="order-id">{{ order.id }}</div>-->
-          <!--            </td>-->
-          <!--            <td>-->
-          <!--              <div class="user-avatar">-->
-          <!--                <img :src="order.uavatar" alt="Avatar" />-->
-          <!--              </div>-->
-          <!--            </td>-->
-          <!--            <td>-->
-          <!--              <div class="user-info">-->
-          <!--                <div>-->
-          <!--                  {{ $t('orders.body.id') }} :-->
-          <!--                  <span>{{ order.user_info.uid }}</span>-->
-          <!--                </div>-->
-          <!--                <div>-->
-          <!--                  {{ $t('orders.body.name') }}:-->
-          <!--                  <span>{{ order.user_info.uname }}</span>-->
-          <!--                </div>-->
-          <!--                <div>-->
-          <!--                  {{ $t('orders.body.faculty') }}:-->
-          <!--                  <span>{{ order.user_info.ufaculty }}</span>-->
-          <!--                </div>-->
-          <!--                <div>-->
-          <!--                  {{ $t('orders.body.course') }}:-->
-          <!--                  <span>{{ order.user_info.ucourse }}</span>-->
-          <!--                </div>-->
-          <!--              </div>-->
-          <!--            </td>-->
-          <!--            <td>-->
-          <!--              <div class="order-books">-->
-          <!--                <img :src="order.books" alt="Books" />-->
-          <!--              </div>-->
-          <!--            </td>-->
-          <!--            <td>-->
-          <!--              <div class="order-name">{{ order.book_name }}</div>-->
-          <!--            </td>-->
-          <!--            <td>-->
-          <!--              <div class="order-date_of_pub">{{ order.date_of_pub }}</div>-->
-          <!--            </td>-->
-          <!--            <td>-->
-          <!--              <div class="order-author">{{ order.book_author }}</div>-->
-          <!--            </td>-->
-          <!--            <td>-->
-          <!--              <div class="order-author">{{ order.book_category }}</div>-->
-          <!--            </td>-->
-          <!--            <td>-->
-          <!--              <div class="order-quantity">{{ order.book_quantity }}</div>-->
-          <!--            </td>-->
-          <!--            <td>-->
-          <!--              <div class="order-remained_time">{{ order.remained_time }}</div>-->
-          <!--            </td>-->
-          <!--            <td>-->
-          <!--              <div class="order-took">-->
-          <!--                <img :src="order.took" alt="Took" />-->
-          <!--              </div>-->
-          <!--            </td>-->
-          <!--          </tr>-->
-        </tbody>
-        <tr v-for="(filledOrder, index) in filledOrders" :key="index">
+        <tr v-for="(searchedOrder, index) in filledOrders" :key="index">
           <td>
             <div class="order-id">
               {{ index + 1 }}
@@ -97,8 +37,10 @@
           <td>
             <div class="user-avatar">
               <img
-                :src="`https://libro.pythonanywhere.com/` + filledOrder.Аватар"
-                alt=""
+                :src="
+                  `https://libro.pythonanywhere.com/` + searchedOrder.Аватар
+                "
+                alt="Avatar"
               />
             </div>
           </td>
@@ -106,58 +48,58 @@
             <div class="user-info">
               <div>
                 {{ $t('orders.body.id') }} :
-                <span>{{ filledOrder.qr_number }}</span>
+                <span>{{ searchedOrder.qr_number }}</span>
               </div>
               <div>
                 {{ $t('orders.body.name') }}:
-                <span>{{ filledOrder.full_name }}</span>
+                <span>{{ searchedOrder.full_name }}</span>
               </div>
               <div>
                 {{ $t('orders.body.faculty') }}:
-                <span>{{ filledOrder.faculty }}</span>
+                <span>{{ searchedOrder.faculty }}</span>
               </div>
               <div>
                 {{ $t('orders.body.course') }}:
-                <span>{{ filledOrder.course }}</span>
+                <span>{{ searchedOrder.course }}</span>
               </div>
             </div>
           </td>
           <td>
             <div class="order-books">
               <img
-                :src="`https://libro.pythonanywhere.com/` + filledOrder.img"
-                alt=""
+                :src="`https://libro.pythonanywhere.com/` + searchedOrder.img"
+                alt="Order books"
               />
             </div>
           </td>
           <td>
             <div class="order-name">
-              {{ filledOrder.title }}
+              {{ searchedOrder.title }}
             </div>
           </td>
           <td>
             <div class="order-book-isbn">
-              {{ filledOrder.isbn }}
+              {{ searchedOrder.isbn }}
             </div>
           </td>
           <td>
             <div class="order-date_pub">
-              {{ filledOrder.date_pub }}
+              {{ searchedOrder.date_pub }}
             </div>
           </td>
           <td>
             <div class="order-author">
-              {{ filledOrder.author }}
+              {{ searchedOrder.author }}
             </div>
           </td>
           <td>
             <div class="order-udc">
-              {{ filledOrder.udc }}
+              {{ searchedOrder.udc }}
             </div>
           </td>
           <td>
             <div class="order-remained_time">
-              {{ now }}
+              {{ searchedOrder.time_of_get | date }}
             </div>
           </td>
         </tr>
@@ -169,25 +111,39 @@
 <script>
 import store from '@/store'
 import { mapState } from 'vuex'
+import NProgress from 'nprogress'
 export default {
   data() {
     return {
-      search: ''
+      search: '',
+      timeout: null
     }
   },
+  mounted() {
+    this.timeout = setInterval(() => store.dispatch('book/fetchBooks'), 5000)
+    this.timeout = setInterval(() => store.dispatch('user/fetchUsers'), 5000)
+    this.timeout = setInterval(() => store.dispatch('order/fetchOrders'), 5000)
+  },
   beforeRouteEnter(routeTo, routeFrom, next) {
+    NProgress.start()
     store.dispatch('book/fetchBooks')
     store.dispatch('user/fetchUsers')
     store.dispatch('order/fetchOrders').then(() => {
+      NProgress.done()
       next()
     })
   },
   beforeRouteUpdate(routeTo, routeFrom, next) {
+    NProgress.start()
     store.dispatch('book/fetchBooks')
     store.dispatch('user/fetchUsers')
     store.dispatch('order/fetchOrders').then(() => {
+      NProgress.done()
       next()
     })
+  },
+  beforeDestroy() {
+    clearTimeout(this.timeout)
   },
   computed: {
     ...mapState(['order', 'orders', 'user', 'users', 'book', 'books']),
@@ -198,53 +154,20 @@ export default {
         return { ...order, ...book, ...user }
       })
     }
+    // searchedOrders() {
+    //   return this.filledOrders.filter(data => {
+    //     let full_name = data.full_name
+    //       .toLowerCase()
+    //       .match(this.search.toLowerCase())
+    //     return full_name
+    //   })
+    // }
+    // orderRemainedTime() {
+    //   return (
+    //     Date.parse(this.filledOrders.time_of_order) -
+    //     Date.parse(this.filledOrders.time_of_get)
+    //   )
+    // }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.card:hover {
-  transform: scale(1);
-}
-th {
-  border-bottom: 1px solid black;
-}
-td {
-  padding-top: 5px;
-  padding-left: 5px;
-}
-.order-id {
-  width: 15px;
-  text-align: center;
-}
-.user-avatar {
-  width: 72px;
-  height: 72px;
-}
-.user-info {
-  text-align: left;
-  font-weight: bold;
-  padding-left: 5px;
-  width: 300px;
-  span {
-    font-weight: normal;
-  }
-}
-.order-books {
-  width: 72px;
-}
-.order-name {
-}
-.order-author {
-}
-.order-quantity {
-}
-.order-remained_time {
-  letter-spacing: 3px;
-}
-.order-took {
-  padding-right: 5px;
-  width: 36px;
-  height: 36px;
-}
-</style>

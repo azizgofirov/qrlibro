@@ -21,6 +21,7 @@
 import BookCard from '@/components/BookCard.vue'
 import store from '@/store'
 import { mapState } from 'vuex'
+import NProgress from 'nprogress'
 export default {
   data() {
     return {
@@ -31,7 +32,9 @@ export default {
     BookCard
   },
   beforeRouteEnter(routeTo, routeFrom, next) {
+    NProgress.start()
     store.dispatch('book/fetchBooks').then(() => {
+      NProgress.done()
       next()
     })
   },
@@ -51,10 +54,16 @@ export default {
 </script>
 
 <style lang="scss">
+/*.book-cards {*/
+/*  display: grid;*/
+/*  grid-template-columns: 1fr 1fr;*/
+/*  grid-gap: 15px;*/
+/*  margin-top: 15px;*/
+/*}*/
 .book-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 15px;
-  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-grow: 1;
 }
 </style>

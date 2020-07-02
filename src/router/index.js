@@ -7,7 +7,7 @@ import BookManage from '@/views/BookManage.vue'
 import OrderList from '@/views/OrderList.vue'
 import Statistics from '@/views/Statistics.vue'
 import NotFound from '@/views/NotFound.vue'
-import NProgress from 'nprogress'
+// import NProgress from 'nprogress'
 import store from '@/store'
 import RetrievedBooks from '../views/RetrievedBooks'
 
@@ -74,13 +74,13 @@ const router = new VueRouter({
   routes
 })
 
-router.beforeEach((routeTo, routeFrom, next) => {
-  NProgress.start()
-  next()
-})
-
-router.afterEach(() => {
-  NProgress.done()
-})
+// router.beforeEach((routeTo, routeFrom, next) => {
+//   NProgress.start()
+//   next()
+// })
+//
+// router.afterEach(() => {
+//   NProgress.done()
+// })
 
 export default router

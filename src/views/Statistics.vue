@@ -1,7 +1,7 @@
 <template>
   <section class="section-fluid">
     <div class="card charts">
-      <Tabs>
+      <Tabs class="statistics-tabs">
         <Tab :title="$t('statistics.charts.tabs.per_day')">
           <BarChart :chartdata="statistics[0]" :options="options" />
         </Tab>
@@ -10,7 +10,7 @@
         </Tab>
         <Tab :title="$t('statistics.charts.tabs.per_month')">
           <BarChart :chartdata="statistics[2]" :options="options" />
-        </Tab>ли
+        </Tab>
         <Tab :title="$t('statistics.charts.tabs.per_year')">
           <BarChart :chartdata="statistics[3]" :options="options" />
         </Tab>
@@ -75,6 +75,9 @@ export default {
 </script>
 
 <style lang="scss">
+.statistics-tabs {
+  padding-top: 0.5rem;
+}
 .charts {
   margin-top: 30px;
   display: flex;
