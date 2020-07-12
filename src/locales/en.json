@@ -64,5 +64,19 @@
         "per_year": "Per Year"
       }
     }
+  },
+  "auth": {
+    "login": {
+      "login_into_your_cabinet": "Log in to your cabinet",
+      "email": "E-mail",
+      "password": "Password"
+    },
+    "register": {
+      "register": "Create an account",
+      "name": "Name",
+      "email": "E-mail",
+      "password": "Password",
+      "confirmPassword": "Confirm password"
+    }
   }
 }

@@ -3,12 +3,7 @@
     <div class="form">
       <label>
         <BaseIcon name="search" width="30" height="30" />
-        <input
-          class="-shadow"
-          type="search"
-          v-model="search"
-          :placeholder="$t('search')"
-        />
+        <input class="-shadow" type="search" v-model="search" :placeholder="$t('search')" />
       </label>
     </div>
     <div class="card -shadow">
@@ -30,9 +25,7 @@
         </thead>
         <tr v-for="(searchedOrder, index) in searchedOrders" :key="index">
           <td>
-            <div class="order-id">
-              {{ index + 1 }}
-            </div>
+            <div class="order-id">{{ index + 1 }}</div>
           </td>
           <td>
             <div class="user-avatar">
@@ -66,41 +59,29 @@
           </td>
           <td>
             <div class="order-books">
-              <img
-                :src="`https://libro.pythonanywhere.com/` + searchedOrder.img"
-                alt="Order books"
-              />
+              <img :src="`https://libro.pythonanywhere.com/` + searchedOrder.img" alt="Order books" />
             </div>
           </td>
           <td>
-            <div class="order-name">
-              {{ searchedOrder.title }}
-            </div>
+            <div class="order-name">{{ searchedOrder.title }}</div>
           </td>
           <td>
-            <div class="order-book-isbn">
-              {{ searchedOrder.isbn }}
-            </div>
+            <div class="order-book-isbn">{{ searchedOrder.isbn }}</div>
           </td>
           <td>
-            <div class="order-date_pub">
-              {{ searchedOrder.date_pub }}
-            </div>
+            <div class="order-date_pub">{{ searchedOrder.date_pub }}</div>
           </td>
           <td>
-            <div class="order-author">
-              {{ searchedOrder.author }}
-            </div>
+            <div class="order-author">{{ searchedOrder.author }}</div>
           </td>
           <td>
-            <div class="order-udc">
-              {{ searchedOrder.udc }}
-            </div>
+            <div class="order-udc">{{ searchedOrder.udc }}</div>
           </td>
           <td>
-            <div class="order-remained_time">
-              {{ searchedOrder.time_of_get | date }}
-            </div>
+            <div class="order-remained_time">{{ searchedOrder.remained_time }}</div>
+          </td>
+          <td>
+            <div></div>
           </td>
         </tr>
       </table>
@@ -151,7 +132,12 @@ export default {
       return this.order.orders.map(order => {
         const book = this.book.books.find(book => order.book_id === book.id)
         const user = this.user.users.find(user => order.user === user.id)
-        return { ...order, ...book, ...user }
+        const remained_time =
+          ((Math.round(Date.parse(order.time_of_order) - Date.now()) %
+            86400000) %
+            3600000) /
+          60000
+        return { ...order, ...book, ...user, remained_time }
       })
     },
     searchedOrders() {
@@ -162,12 +148,6 @@ export default {
         return full_name
       })
     }
-    // orderRemainedTime() {
-    //   return (
-    //     Date.parse(this.filledOrders.time_of_order) -
-    //     Date.parse(this.filledOrders.time_of_get)
-    //   )
-    // }
   }
 }
 </script>

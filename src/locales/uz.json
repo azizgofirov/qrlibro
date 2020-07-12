@@ -64,5 +64,19 @@
         "per_year": "Yilda"
       }
     }
+  },
+  "auth": {
+    "login": {
+      "login_into_your_cabinet": "O'z kabinetingizga kiring",
+      "email": "E-mail",
+      "password": "Parol"
+    },
+    "register": {
+      "register": "Account yarating",
+      "name": "Ism",
+      "email": "E-mail",
+      "password": "Parol",
+      "confirmPassword": "Parolni tasdiqlash"
+    }
   }
 }

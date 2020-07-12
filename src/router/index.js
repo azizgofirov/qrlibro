@@ -6,6 +6,8 @@ import BookList from '@/views/BookList.vue'
 import BookManage from '@/views/BookManage.vue'
 import OrderList from '@/views/OrderList.vue'
 import Statistics from '@/views/Statistics.vue'
+import Login from '@/views/Auth/Login.vue'
+import Registration from '@/views/Auth/Registration.vue'
 import NotFound from '@/views/NotFound.vue'
 // import NProgress from 'nprogress'
 import store from '@/store'
@@ -56,6 +58,16 @@ const routes = [
     path: '/statistics',
     name: 'statistics',
     component: Statistics
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Registration
   },
   {
     path: '/404',

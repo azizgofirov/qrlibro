@@ -64,5 +64,19 @@
         "per_year": "В Год"
       }
     }
+  },
+  "auth": {
+    "login": {
+      "login_into_your_cabinet": "Войдите в свой кабинет",
+      "email": "E-mail",
+      "password": "Пароль"
+    },
+    "register": {
+      "register": "Создайте аккаунт",
+      "name": "Имя",
+      "email": "E-mail",
+      "password": "Пароль",
+      "confirmPassword": "Подтвердите пароль"
+    }
   }
 }

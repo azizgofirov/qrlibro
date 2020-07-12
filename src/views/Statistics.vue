@@ -36,7 +36,6 @@ import Tab from '../components/Tab'
 import Tabs from '../components/Tabs'
 import BarChart from '../components/BarChart'
 import HorizontalBarChart from '../components/HorizontalBarChart'
-// import ApiService from '../services/ApiService'
 export default {
   name: 'Statistics',
   components: { HorizontalBarChart, BarChart, Tabs, Tab },

@@ -15,6 +15,7 @@
       <div class="app-nav-bar__lang">
         <LanguageSwitcher />
       </div>
+      <router-link to="/login">Login</router-link>
     </div>
   </section>
 </template>
